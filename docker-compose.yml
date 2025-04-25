@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  streamlit:
+    build:
+      context: .
+    ports:
+      - "8510:8510"
+    volumes:
+      - .:/app
+    command: streamlit run app.py --server.port=8510
+
